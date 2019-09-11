@@ -39,8 +39,9 @@
     ctx.arc(0, 0, 200, 0, 2 * Math.PI);
     ctx.stroke();
     //画地球
-    //2 * Math.PI / 60 * time.getSeconds() 每一秒的移动
+    //2 * Math.PI / 60 * time.getSeconds() 每一秒的移动 360° = 2pi 走一小格就等于 1/60
     //2 * Math.PI / 60000 * time.getMilliseconds() 每1毫秒的移动
+    console.log(time.getMilliseconds());
     ctx.rotate(2 * Math.PI / 60 * time.getSeconds() + 2 * Math.PI / 60000 * time.getMilliseconds());
     ctx.save();
     //地球自转
